@@ -1,13 +1,38 @@
-body {
-    background: cornflowerblue;
-    background-size: auto 100vh;
-    font-family: 'Lucida Sans', sans-serif;
-    height: 100vh;
-}
-.menu {
-    background: white;
+html {
+    height: 100%;
 }
 
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(-45deg, dodgerblue, lightgreen, turquoise, royalblue);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+	background-position: 0% 50%;
+	}
+	50% {
+	background-position: 100% 50%;
+	}
+	100% {
+    background-position: 0% 50%;
+    }
+}
+
+
+ .menu {
+    font-family: lucida, sans-serif;
+    font-weight: bold;
+
+}
+
+ul,
 .menu ul {
     display: flex;
     justify-content: space-around;
@@ -17,8 +42,11 @@ body {
     list-style: none;
 }
 
+
 a {
     text-decoration: none;
+    text-shadow: black 1px 1px 2px;
+    color: white;
 } 
 
 a:hover {
@@ -26,12 +54,50 @@ a:hover {
 
 }
 
-.site-subtitle,
-.site-title {
-    color: whitesmoke;
-    text-align: center;
+.card {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    background: rgba(255,255,255,.3);
+    border-radius: 40px;
+    box-shadow: 0 0 10px 1px;
+    font-family: lucida, sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
-.site-subtitle {
-    font-style: italic;
+.card h1 {
+    color: white;
+    text-align: right;
+    text-shadow: black 1px 2px 6px;
+    font-size: 38px;
+    margin: 2px;
+    border: 0;
+    padding: 0;
+}
+.imagem {
+    background-color: white;
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+    padding: 2px;
+    transform: translate(5px, -380px);
+}
+.imagem img {
+    background-color: white;
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+
+}
+
+.card h3, p {
+    text-align: right;
+}
+
+.card li {
+    list-style: none;
 }
